@@ -361,7 +361,7 @@ header.active {
 	display: flex;
 	position: absolute;
 	left: 50%;
-	bottom: 10px;
+	bottom: 15px;
 	transform: translateX(-50%);
 }
 
