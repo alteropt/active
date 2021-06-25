@@ -6,5 +6,11 @@ $(window).on('scroll', function() {
 });
 
 
+$('.header__burger-menu').on('click', function() {
+	$('.header__burger-menu').toggleClass('active');
+	$('.header__navigation').toggleClass('active');
+});
+
+
 
 
