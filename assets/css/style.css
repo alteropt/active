@@ -121,6 +121,7 @@ header.active {
 	line-height: 1.2;
 	font-weight: 700;
 	transition: color .2s linear;
+	cursor: pointer;
 }
 
 .header__navigation-item.active {
