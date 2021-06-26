@@ -17,6 +17,8 @@ $(function() {
 
 	$('[data-scroll]').on('click', function(event) {
 		$('[data-scroll]').removeClass('active');
+		
+		event.preventDefault();
 		var blockSelector = $(this).data('scroll');
 		var blockOffset = $(blockSelector).offset().top;
 		var headerOffset = $('header').innerHeight();
