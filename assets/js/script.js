@@ -73,7 +73,14 @@ $(document).ready(function() {
 		}
 	});
 
-	
+	$('.slider').slick({
+		arrows: false,
+		dots: true
+	});
+
+	var slideNumber = $('.bio__slide.slick-active').attr('data-slick-index');
+	$('.slick-dots li button').removeClass('active');
+	$(`#slick-slide-control0${slideNumber}`).addClass('active');
 });
 
 
