@@ -43,19 +43,23 @@ let worksOffset = $('.works').offset().top - $('header').innerHeight();
 let teamOffset = $('.team').offset().top - $('header').innerHeight();
 let bioOffset = $('.bio').offset().top - $('header').innerHeight();
 
-if(headerOffset >= featuresOffset) {
+if(headerOffset > featuresOffset && 
+headerOffset <= worksOffset) {
 	$('.header__navigation-item').removeClass('active');
 	$('.href-1').toggleClass('active');
 }
-if(headerOffset >= worksOffset) {
+if(headerOffset > worksOffset && 
+headerOffset <= teamOffset) {
 	$('.header__navigation-item').removeClass('active');
 	$('.href-2').toggleClass('active');
 }
-if(headerOffset >= teamOffset) {
+if(headerOffset > teamOffset && 
+headerOffset <= bioOffset) {
 	$('.header__navigation-item').removeClass('active');
 	$('.href-3').toggleClass('active');
 }
-if(headerOffset >= bioOffset) {
+if(headerOffset > bioOffset && 
+headerOffset <= $('.download').offset().top) {
 	$('.header__navigation-item').removeClass('active');
 	$('.href-4').toggleClass('active');
 }
