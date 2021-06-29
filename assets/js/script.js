@@ -37,36 +37,65 @@ $('.header__logo').on('click', function(event) {
 	$('.header__navigation-item').removeClass('active');
 })
 
+let headerOffset = $('header').offset().top;
+let featuresOffset = $('.features').offset().top - $('header').innerHeight();
+let worksOffset = $('.works').offset().top - $('header').innerHeight();
+let teamOffset = $('.team').offset().top - $('header').innerHeight();
+let bioOffset = $('.bio').offset().top - $('header').innerHeight();
+
+if(headerOffset >= featuresOffset) {
+	$('.header__navigation-item').removeClass('active');
+	$('.href-1').toggleClass('active');
+}
+if(headerOffset >= worksOffset) {
+	$('.header__navigation-item').removeClass('active');
+	$('.href-2').toggleClass('active');
+}
+if(headerOffset >= teamOffset) {
+	$('.header__navigation-item').removeClass('active');
+	$('.href-3').toggleClass('active');
+}
+if(headerOffset >= bioOffset) {
+	$('.header__navigation-item').removeClass('active');
+	$('.href-4').toggleClass('active');
+}
+if(headerOffset >= $('.download').offset().top - $('header').innerHeight()) {
+	$('.header__navigation-item').removeClass('active');
+	$('.href-5').toggleClass('active');
+}
+
+
 $(window).on('scroll', function() {
-	if($(window).scrollTop() <= $('.features').offset().top - $('header').innerHeight()) {
+	let downloadOffset = $('.download').offset().top - $('header').innerHeight();
+	if($(window).scrollTop() <= featuresOffset) {
 		$('.header__navigation-item').removeClass('active');
 	}
 
-	if($(window).scrollTop() > $('.features').offset().top - $('header').innerHeight() - 10 &&
-	$(window).scrollTop() <= $('.works').offset().top - $('header').innerHeight()) {
+	if($(window).scrollTop() > featuresOffset - 10 &&
+	$(window).scrollTop() <= worksOffset) {
 		$('.header__navigation-item').removeClass('active');
 		$('.href-1').toggleClass('active');
 	}
 	
-	if($(window).scrollTop() > $('.works').offset().top - $('header').innerHeight() - 10 &&
-	$(window).scrollTop() <= $('.team').offset().top - $('header').innerHeight()) {
+	if($(window).scrollTop() > worksOffset - 10 &&
+	$(window).scrollTop() <= teamOffset) {
 		$('.header__navigation-item').removeClass('active');
 		$('.href-2').toggleClass('active');
 	}
 
-	if($(window).scrollTop() > $('.team').offset().top - $('header').innerHeight() - 10 &&
-	$(window).scrollTop() <= $('.bio').offset().top - $('header').innerHeight()) {
+	if($(window).scrollTop() > teamOffset - 10 &&
+	$(window).scrollTop() <= bioOffset) {
 		$('.header__navigation-item').removeClass('active');
 		$('.href-3').toggleClass('active');
 	}
 
-	if($(window).scrollTop() > $('.bio').offset().top - $('header').innerHeight() - 10 &&
-	$(window).scrollTop() <= $('.download').offset().top - $('header').innerHeight()) {
+	if($(window).scrollTop() > bioOffset - 10 &&
+	$(window).scrollTop() <= downloadOffset) {
 		$('.header__navigation-item').removeClass('active');
 		$('.href-4').toggleClass('active');
 	}
 
-	if($(window).scrollTop() > $('.download').offset().top - $('header').innerHeight() - 10) {
+	if($(window).scrollTop() > downloadOffset - 10) {
 		$('.header__navigation-item').removeClass('active');
 		$('.href-5').toggleClass('active');
 	}
@@ -77,35 +106,7 @@ $('.slider').slick({
 	dots: true
 });
 
-var slideNumber = $('.bio__slide.slick-active').attr('data-slick-index');
-$('.slick-dots li button').removeClass('active');
-$(`#slick-slide-control0${slideNumber}`).addClass('active');
 
-$('.bio__slider').mousemove(function() {
-	var slideNumber = $('.bio__slide.slick-active').attr('data-slick-index');
-	$('.slick-dots li button').removeClass('active');
-	$(`#slick-slide-control0${slideNumber}`).addClass('active');	
-});
-
-
-$('.bio__slider').on('click', function() {
-	var slideNumber = $('.bio__slide.slick-active').attr('data-slick-index');
-	$('.slick-dots li button').removeClass('active');
-	$(`#slick-slide-control0${slideNumber}`).addClass('active');	
-});
-
-
-$('.bio__slider').on('touchmove', function() {
-	var slideNumber = $('.bio__slide.slick-active').attr('data-slick-index');
-	$('.slick-dots li button').removeClass('active');
-	$(`#slick-slide-control0${slideNumber}`).addClass('active');	
-});
-
-$('.bio__slider').keydown(function() {
-	var slideNumber = $('.bio__slide.slick-active').attr('data-slick-index');
-	$('.slick-dots li button').removeClass('active');
-	$(`#slick-slide-control0${slideNumber}`).addClass('active');	
-});
 
 
 
