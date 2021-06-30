@@ -126,6 +126,7 @@ header.active {
 	transition: opacity .2s linear,
 	color .2s linear;
 	cursor: pointer;
+        user-select: none; 
 }
 
 .header__navigation-item.active {
@@ -217,6 +218,7 @@ header.active {
 	margin-bottom: 34px;	
 	position: relative;
 	height: 60px;
+        user-select: none; 
 }
 
 .features__logo img {
