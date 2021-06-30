@@ -91,10 +91,11 @@ header.active {
 	width: 100%;
 	top: 9px;
 	height: 2px;
+        transition: width .2s linear;
 }
 
 .header__burger-menu.active span {
-	display: none;
+	width: 0;
 }
 
 .header__burger-menu.active:before {
@@ -262,6 +263,7 @@ header.active {
 	position: relative;
 	border-right: 1px solid #fff;
 	border-bottom: 1px solid #fff;
+        user-select: none;
 }
 
 .works__photo:nth-child(4),
