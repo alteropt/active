@@ -95,7 +95,7 @@ header.active {
 }
 
 .header__burger-menu.active span {
-	width: 0;
+	width: 0px;
 }
 
 .header__burger-menu.active:before {
@@ -692,6 +692,7 @@ li.slick-active  #slick-slide-control04 {
 	.header__navigation-item {
 		margin-bottom: 15px;
 		letter-spacing: 3px;
+                cursor: auto;
 	}
 
 	/* Burger */
@@ -709,6 +710,11 @@ li.slick-active  #slick-slide-control04 {
 	.intro__subtitle {
 		font-size: 15px;
 	} 
+
+        /* Features */
+        .features__logo {
+                cursor: auto; 
+}
 
 	/* Works */
 	.works__photo {
