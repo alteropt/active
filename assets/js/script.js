@@ -12,6 +12,7 @@ if ($('header').offset().top > 0) {
 $('.header__burger-menu').on('click', function() { 
 	$('.header__burger-menu').toggleClass('active');
 	$('.header__navigation').toggleClass('active');
+});
 
 $(document).mouseup(function(event) { 
 	var div = $(".header__navigation"); 
