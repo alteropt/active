@@ -9,17 +9,12 @@ if ($('header').offset().top > 0) {
 	$('.header').toggleClass('active');
 }
 
-
-$('.header__burger-menu').on('click', function() { 
-	$('.header__burger-menu').toggleClass('active');
-	$('.header__navigation').toggleClass('active');
-	$(document).mouseup(function(event) { 
-		var div = $(".header__navigation"); 
-		if (!div.is(event.target) && div.has(event.target).length === 0) {
-			div.removeClass('active');
-			$('.header__burger-menu').removeClass('active'); 
-		};
-	});
+$(document).mouseup(function(event) { 
+	var div = $(".header__navigation"); 
+	if (!div.is(event.target) && div.has(event.target).length === 0) {
+		div.removeClass('active');
+		$('.header__burger-menu').removeClass('active'); 
+	};
 });
 
 $('.header__burger-menu').on('click', function() { 
