@@ -15,7 +15,7 @@ $('.header__burger-menu').on('click', function() {
 
 $(document).mouseup(function(event) { 
 	var div = $(".header__navigation"); 
-	if (!div.is(event.target) && div.has(event.target).length === 0) {
+	if (!div.is(event.target) && div.has(event.target).length === 0 && !$('.header__burger-menu').is(event.target)) {
 		div.removeClass('active');
 		$('.header__burger-menu').removeClass('active'); 
 	};
