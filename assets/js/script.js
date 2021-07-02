@@ -22,6 +22,10 @@ $('.header__burger-menu').on('click', function() {
 	});
 });
 
+$('.header__burger-menu').on('click', function() { 
+	$('.header__burger-menu').toggleClass('active');
+	$('.header__navigation').toggleClass('active');
+
 $('[data-scroll]').on('click', function(event) {
 	$('[data-scroll]').removeClass('active');
 	event.preventDefault()
