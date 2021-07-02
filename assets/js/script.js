@@ -114,6 +114,6 @@ $('.slider').slick({
 	dots: true
 });
 
-$(window).on('resize', function() {
+window.addEventListener("orientationchange", function() {
     	location.reload();
 });
